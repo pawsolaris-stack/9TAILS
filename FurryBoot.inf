@@ -1,0 +1,24 @@
+[Defines]
+  INF_VERSION    = 0x00010006
+  BASE_NAME      = FurryBoot
+  FILE_GUID      = 9C4E1B7A-3F2D-4E8A-B6C1-D0A5F2E7B3C9
+  MODULE_TYPE    = UEFI_APPLICATION
+  VERSION_STRING = 1.0
+  ENTRY_POINT    = FurryBootEntryPoint
+
+[Sources]
+  FurryBoot.c
+
+[Packages]
+  MdePkg/MdePkg.dec
+
+[LibraryClasses]
+  UefiApplicationEntryPoint
+  UefiLib
+  UefiBootServicesTableLib
+  MemoryAllocationLib
+  IoLib
+
+[Protocols]
+  gEfiSimpleFileSystemProtocolGuid
+  gEfiGraphicsOutputProtocolGuid
